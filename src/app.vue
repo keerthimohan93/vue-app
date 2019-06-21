@@ -14,7 +14,12 @@
         <div v-if="loader" class="loader-custom">
           <img src="assets/loader.gif" alt="loader">
         </div>
-        <div v-for="(item, index) of filteredList" class="column card is-one-quarter" :key="index">
+        <div
+          tabindex="0"
+          v-for="(item, index) of filteredList"
+          class="column card is-one-quarter"
+          :key="index"
+        >
           <h3 class="card-header">Word: {{item.word}}</h3>
           <div class="card-content">
             <p>In Hindi: {{item.nagari}}</p>
